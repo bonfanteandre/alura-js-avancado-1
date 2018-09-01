@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercícios</title>
+</head>
+<body>
+    <script src="Pessoa.js"></script>
+    <script src="Conta.js"></script>
+    <script>
+
+            /*
+                Utilizando var, as variaveis nao tem escopo
+                de bloco. Sendo assim, é possível acessar de
+                fora do bloco em que foram declaradas, ao
+                contrário do Java, C, C#, etc
+            */
+            // for(var i = 1; i <= 100; i++) {
+            //     var nome = 'André';
+            //     console.log(i);
+            // }
+    
+            /*
+                Para resolver este problema, basta utilizar
+                a palavra reservar let na hora de declarar
+                a variavel. Assim a variavel fica com o 
+                escopo do bloco que foi declarada
+            */
+            // for(let i = 1; i <= 100; i++) {
+            //     let nome = 'André';
+            //     console.log(i);
+            // }
+    
+            // alert(i);
+            // alert(nome);
+        </script>
+    <script>
+        
+        console.log('Pessoa: ');
+        let p = new Pessoa('André', 'Bonfante');
+        console.log(p.nome);
+        console.log(p.sobrenome);
+        console.log(p.nomeCompleto);
+
+        console.log('Conta: ');
+        let c = new Conta('André', 100);
+        c.deposita(1500);
+        console.log(c.titular);
+        console.log(c.conta);
+        console.log(c.saldo);
+
+    </script>
+</body>
+</html>
